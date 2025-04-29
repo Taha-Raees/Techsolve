@@ -9,7 +9,7 @@ import { usePathname, useRouter } from "next/navigation"
 
 const mainMenuItems = [
   { name: "Home", href: "/" },
-  { name: "Services", href: "/services" },
+  { name: "Services", href: "#services" },
   { name: "Projects", href: "/projects" },
   { name: "About", href: "/about" },
   { name: "Contact", href: "/#contact" },
