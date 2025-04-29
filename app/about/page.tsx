@@ -12,7 +12,7 @@ const teamMembers = [
     name: "Muhammad Taha Raees",
     role: "Lead Developer",
     image: "/images/file.png",
-    bio: "Taha has over 10 years of experience in full-stack development with expertise in React, Node.js, and cloud architecture. He leads our most complex projects.",
+    bio: "Taha has over 5 years of experience in full-stack development with expertise in React, Node.js, and cloud architecture. He leads our most complex projects.",
     skills: ["React", "Node.js", "AWS", "System Architecture"],
     social: {
       linkedin: "#",
@@ -20,54 +20,7 @@ const teamMembers = [
       email: "taharaees@techsolve.com",
     },
   },
-  {
-    name: "Michael Chen",
-    role: "UX/UI Designer",
-    image: "/placeholder.svg?height=400&width=400",
-    bio: "Michael brings 8 years of design experience with a focus on creating intuitive user experiences. His background in psychology helps him design interfaces that users love.",
-    skills: ["UI Design", "User Research", "Figma", "Design Systems"],
-    social: {
-      linkedin: "#",
-      github: "#",
-      email: "michael@techsolve.com",
-    },
-  },
-  {
-    name: "Aisha Patel",
-    role: "Backend Developer",
-    image: "/placeholder.svg?height=400&width=400",
-    bio: "Aisha specializes in database design and API development. With 6 years of experience, she ensures our systems are secure, scalable, and perform optimally under any load.",
-    skills: ["Python", "PostgreSQL", "GraphQL", "System Security"],
-    social: {
-      linkedin: "#",
-      github: "#",
-      email: "aisha@techsolve.com",
-    },
-  },
-  {
-    name: "Thomas Mueller",
-    role: "Mobile Developer",
-    image: "/placeholder.svg?height=400&width=400",
-    bio: "Thomas has developed over 20 mobile applications for iOS and Android. His expertise in React Native allows us to deliver consistent experiences across all platforms.",
-    skills: ["React Native", "iOS", "Android", "Mobile UX"],
-    social: {
-      linkedin: "#",
-      github: "#",
-      email: "thomas@techsolve.com",
-    },
-  },
-  {
-    name: "Elena Rodriguez",
-    role: "Project Manager",
-    image: "/placeholder.svg?height=400&width=400",
-    bio: "Elena ensures our projects are delivered on time and within budget. With her background in both technology and business, she bridges the gap between technical details and business goals.",
-    skills: ["Agile Methodology", "Risk Management", "Client Communication", "Resource Planning"],
-    social: {
-      linkedin: "#",
-      github: "#",
-      email: "elena@techsolve.com",
-    },
-  },
+ 
 ]
 
 export default function AboutPage() {
