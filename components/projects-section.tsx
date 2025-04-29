@@ -11,8 +11,8 @@ export default function ProjectsSection() {
       <div className="container-custom">
         <AnimatedSection>
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-primary mb-4">Our Work Speaks for Itself</h2>
-            <p className="text-gray-600 text-gray-300 max-w-2xl mx-auto">
+            <h2 className="text-3xl font-bold text-primary mb-4 text-white">Our Work Speaks for Itself</h2>
+            <p className="text-gray-300 max-w-2xl mx-auto">
               Explore our portfolio of successful projects that have helped SMEs transform their operations.
             </p>
           </div>
