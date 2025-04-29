@@ -23,7 +23,7 @@ const teamMembers = [
   {
     name: "Humayun Zahid Chohan",
     role: "Co-Founder & CFO",
-    image: "/images/cfo-profile.jpg",
+    image: "/images/humyun.png",
     bio: "With 7 years in financial strategy, Humayun manages our fiscal operations and investment strategies. He specializes in SaaS financial models and has helped scale multiple tech startups to profitability.",
     skills: ["Financial Planning", "Risk Management", "Fundraising", "Business Strategy"],
     social: {
@@ -200,13 +200,13 @@ export default function AboutPage() {
                         <div className="absolute inset-0 bg-primary/10 dark:bg-primary/20 rounded-blob transform rotate-45 scale-[0.85] translate-x-6" />
                         <div className="absolute inset-0 bg-secondary/10 dark:bg-secondary/20 rounded-blob transform -rotate-12 scale-90 -translate-x-6" />
                         <GlowContainer className="relative w-96 h-96 mx-auto mt-12">
-                          <div className="relative w-full h-full rounded-[2.5rem] overflow-hidden border-2 border-gray-200 dark:border-gray-700">
-                  <img
-                    src={member.image || "/placeholder.svg"}
-                    alt={member.name}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
+                        <div className="relative w-96 h-96 rounded-[52.5rem]  overflow-hidden ">
+                            <img
+                              src={member.image || "/placeholder.svg"}
+                              alt={member.name}
+                              className="w-full h-full object-contain"
+                            />
+                          </div>
                         </GlowContainer>
                       </div>
                     </div>
