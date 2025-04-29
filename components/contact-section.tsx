@@ -188,7 +188,7 @@ export default function ContactSection() {
                     <MapPin className="h-5 w-5 text-primary dark:text-teal-400 mr-3 mt-0.5" />
                     <div>
                       <h4 className="font-medium dark:text-gray-200">Address</h4>
-                      <p className="text-gray-600 dark:text-gray-300">Postdeich 5, 47533 Kleve, Germany</p>
+                      <p className="text-gray-600 dark:text-gray-300">Graf johann straße 18, 47533 Kleve, Germany</p>
                     </div>
                   </div>
                 </div>

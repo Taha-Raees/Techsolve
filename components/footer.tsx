@@ -67,8 +67,8 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact</h3>
             <ul className="space-y-2">
-              <li>1 Approach Rd, Raynes Park</li>
-              <li>London, SW20 8BA</li>
+              <li>Graf johann straße 18</li>
+              <li>47533 Kleve, Germany</li>
               <li>contact@techsolve.com</li>
               <li>+44 20 1234 5678</li>
             </ul>
