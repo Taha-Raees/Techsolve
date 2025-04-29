@@ -10,17 +10,40 @@ import { StaggerContainer } from "@/components/animations/stagger-container"
 const teamMembers = [
   {
     name: "Muhammad Taha Raees",
-    role: "Lead Developer",
+    role: "Co-Founder & CTO",
     image: "/images/file.png",
-    bio: "Taha has over 5 years of experience in full-stack development with expertise in React, Node.js, and cloud architecture. He leads our most complex projects.",
-    skills: ["React", "Node.js", "AWS", "System Architecture"],
+    bio: "As CTO, Taha oversees all technical operations with 5+ years experience in cloud architecture and system design. He specializes in building scalable solutions that drive business growth through technology innovation.",
+    skills: ["Cloud Architecture", "DevOps", "System Security", "Technical Leadership"],
     social: {
       linkedin: "#",
       github: "#",
-      email: "taharaees@techsolve.com",
+      email: "taha.raees@techsolve.com",
     },
   },
- 
+  {
+    name: "Humayun Zahid Chohan",
+    role: "Co-Founder & CFO",
+    image: "/images/cfo-profile.jpg",
+    bio: "With 7 years in financial strategy, Humayun manages our fiscal operations and investment strategies. He specializes in SaaS financial models and has helped scale multiple tech startups to profitability.",
+    skills: ["Financial Planning", "Risk Management", "Fundraising", "Business Strategy"],
+    social: {
+      linkedin: "#",
+      github: "#",
+      email: "humayun.chohan@techsolve.com",
+    },
+  },
+  {
+    name: "Franziska Müller",
+    role: "Co-Founder & CMO",
+    image: "/images/cmo-profile.jpg",
+    bio: "Franziska drives our brand strategy with 8+ years in digital marketing. She has led successful campaigns and specializes in SaaS product launches and customer acquisition.",
+    skills: ["Brand Strategy", "Digital Marketing", "SEO/SEM", "Customer Analytics"],
+    social: {
+      linkedin: "#",
+      twitter: "#",
+      email: "franziska.muller@techsolve.com",
+    },
+  },
 ]
 
 export default function AboutPage() {
