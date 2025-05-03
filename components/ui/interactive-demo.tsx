@@ -65,7 +65,7 @@ export function InteractiveDemo({
   }
 
   return (
-    <div className={cn("rounded-[2.5rem] overflow-hidden border border-gray-200 dark:border-gray-800", className)}>
+    <div className={cn("rounded-[1rem] overflow-hidden border border-gray-200 dark:border-gray-800", className)}>
       <Tabs defaultValue="demo" className="w-full" onValueChange={setActiveTab}>
         <div className="bg-gray-50 dark:bg-gray-800 p-4 flex items-center justify-between">
           <h3 className="text-lg font-semibold">{title}</h3>
@@ -79,11 +79,14 @@ export function InteractiveDemo({
           <div className="relative">
             {/* Step image */}
             <div className="aspect-video bg-gray-100 dark:bg-gray-900">
-              <img
-                src={steps[currentStep].image || "/placeholder.svg"}
-                alt={steps[currentStep].title}
-                className="w-full h-full object-contain"
-              />
+            <iframe
+  src={steps[currentStep].image} // Use the URL of your app/page here
+  title={steps[currentStep].title}
+  className="w-full h-full"
+  loading="lazy"
+  allowFullScreen
+></iframe>
+
             </div>
 
             {/* Progress bar */}

@@ -66,10 +66,10 @@ export default function ScrollIndicator() {
     <div className="fixed right-6 top-1/2 transform -translate-y-1/2 z-40 hidden lg:block">
       <div className="relative h-64 flex flex-col items-center">
         {/* Vertical line */}
-        <div className="absolute h-full w-0.5 bg-gray-200 dark:bg-gray-700 rounded-full">
+        <div className="absolute h-full w-0.5 bg-gray-700 rounded-full">
           {/* Progress indicator */}
           <div
-            className="absolute w-0.5 bg-primary dark:bg-teal-400 rounded-full transition-all duration-300"
+            className="absolute w-0.5 bg-teal-400 rounded-full transition-all duration-300"
             style={{ height: `${scrollProgress}%` }}
           ></div>
         </div>
@@ -80,8 +80,8 @@ export default function ScrollIndicator() {
             key={section}
             className={`absolute w-4 h-4 rounded-full border-2 transition-all duration-300 ${
               activeSection === section
-                ? "bg-primary border-primary dark:bg-teal-400 dark:border-teal-400 scale-125"
-                : "bg-white dark:bg-gray-800 border-gray-300 dark:border-gray-600 hover:border-primary dark:hover:border-teal-400"
+                ? "bg-teal-400 border-teal-400 scale-125"
+                : "bg-white border-gray-600 hover:border-teal-400"
             }`}
             style={{ top: `${(index / (sections.length - 1)) * 100}%` }}
             onClick={() => scrollToSection(section)}

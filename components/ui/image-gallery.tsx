@@ -39,10 +39,10 @@ export function ImageGallery({ images, className }: ImageGalleryProps) {
   return (
     <div className={cn("relative", className)}>
       {/* Main gallery view */}
-      <div className="relative overflow-hidden rounded-[2.5rem] border border-gray-200 dark:border-gray-800">
+      <div className="relative overflow-hidden rounded-[0.5rem] border border-gray-200 dark:border-gray-800">
         <div className="aspect-video relative">
           <img
-            src={images[currentIndex].src || "/placeholder.svg"}
+            src={images[currentIndex].src.replace("/public", "") || "/placeholder.svg"}
             alt={images[currentIndex].alt}
             className="w-full h-full object-cover"
           />
@@ -122,7 +122,7 @@ export function ImageGallery({ images, className }: ImageGalleryProps) {
             <X className="h-6 w-6" />
           </Button>
 
-          <div className="relative w-full max-w-5xl">
+          <div className="relative w-screen max-w-5xl">
             <img
               src={images[currentIndex].src || "/placeholder.svg"}
               alt={images[currentIndex].alt}

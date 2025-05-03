@@ -11,22 +11,22 @@ export default function RestaurantInventoryProject() {
   // Sample gallery images
   const galleryImages = [
     {
-      src: "/placeholder.svg?height=600&width=800",
+      src: "/images/foodwork-Dashboard.webp",
       alt: "Inventory Dashboard",
       caption: "Main inventory dashboard showing stock levels across all locations",
     },
     {
-      src: "/placeholder.svg?height=600&width=800",
+      src: "/images/food-locations.webp",
       alt: "Mobile Scanning Interface",
       caption: "Staff using the mobile app to scan inventory items",
     },
     {
-      src: "/placeholder.svg?height=600&width=800",
+      src: "/images/foodwork-report.webp",
       alt: "Analytics View",
       caption: "Analytics dashboard showing inventory trends and forecasting",
     },
     {
-      src: "/placeholder.svg?height=600&width=800",
+      src: "/images/foodwork-inventory.webp",
       alt: "Order Management",
       caption: "Automated ordering system interface",
     },
@@ -38,7 +38,7 @@ export default function RestaurantInventoryProject() {
       title: "Real-time Inventory Tracking",
       description:
         "The system provides real-time visibility of inventory across all restaurant locations, with color-coded indicators for stock levels.",
-      image: "/placeholder.svg?height=600&width=800",
+      image: "https://foodwork.vercel.app/",
     },
     {
       title: "Barcode Scanning",
@@ -159,18 +159,18 @@ export default function RestaurantInventoryProject() {
               </div>
             </div>
             <div>
+            <h3 className="text-xl font-semibold mb-6">System Gallery</h3>
+            <ImageGallery images={galleryImages} />
+          </div>
+          </div>
+          <div className="mt-16">
               <InteractiveDemo
                 title="Inventory Management System"
                 description="Experience how the inventory management system works across different scenarios."
                 steps={demoSteps}
               />
             </div>
-          </div>
-
-          <div className="mt-16">
-            <h3 className="text-xl font-semibold mb-6">System Gallery</h3>
-            <ImageGallery images={galleryImages} />
-          </div>
+          
 
           <div className="mt-16 grid md:grid-cols-2 gap-12">
             <div>

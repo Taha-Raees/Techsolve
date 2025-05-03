@@ -14,7 +14,7 @@ const projects = [
     client: "FoodWorks Group",
     description:
       "A comprehensive inventory management solution that streamlined operations across 12 restaurant locations, reducing waste and improving efficiency.",
-    image: "/placeholder.svg?height=400&width=600",
+    image: "/images/foodwork-dashboard.webp",
     techStack: ["Next.js", "Node.js", "MongoDB", "React Native"],
     industry: "Hospitality",
     year: "2023",
