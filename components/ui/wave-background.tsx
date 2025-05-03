@@ -4,7 +4,7 @@ import { motion } from "framer-motion"
 
 export const WaveBackground = () => {
   return (
-    <div className="absolute inset-0 overflow-hidden pointer-events-none">
+    <div className="absolute inset-0 overflow-hidden pointer-events-none z-10">
       <div className="absolute w-full h-full">
         <motion.div
           className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/10 to-primary"
