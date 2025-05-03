@@ -25,7 +25,7 @@ export function GlowContainer({
   const activeGlowColor = glowColor || (isDark ? darkGlowColor : lightGlowColor)
 
   return (
-    <div className={cn("relative rounded-[2.5rem] overflow-hidden", className)}>
+    <div className={cn("relative overflow-hidden", className)}>
       <div
         className="absolute inset-0 z-0"
         style={{

@@ -183,14 +183,13 @@ export default function RestaurantInventoryProject() {
             </div>
             <div>
               <GlowContainer className="aspect-[9/16] max-w-[300px] mx-auto">
-                <div className="relative w-full h-full rounded-[2.5rem] overflow-hidden border border-gray-200 dark:border-gray-800">
-                  {/* Image placeholder with instructions */}
-                  <div className="absolute inset-0 flex flex-col items-center justify-center bg-gray-100 dark:bg-gray-800 p-6 text-center">
-                    <p className="text-gray-500 dark:text-gray-400 font-medium mb-2">Mobile App Screenshot</p>
-                    <p className="text-sm text-gray-400 dark:text-gray-500">
-                      Place a screenshot of the mobile inventory scanning interface
-                    </p>
-                  </div>
+                <div className="relative w-full h-full  overflow-hidden border border-gray-200 dark:border-gray-800">
+                <iframe
+  src="https://foodwork.vercel.app/"
+  className="w-full h-full"
+  loading="lazy"
+  allowFullScreen
+></iframe>
                 </div>
               </GlowContainer>
             </div>
@@ -241,13 +240,10 @@ export default function RestaurantInventoryProject() {
             <div>
               <GlowContainer className="aspect-video">
                 <div className="relative w-full h-full rounded-[2.5rem] overflow-hidden border border-gray-200 dark:border-gray-800">
-                  {/* Image placeholder with instructions */}
-                  <div className="absolute inset-0 flex flex-col items-center justify-center bg-gray-100 dark:bg-gray-800 p-6 text-center">
-                    <p className="text-gray-500 dark:text-gray-400 font-medium mb-2">Results Visualization</p>
-                    <p className="text-sm text-gray-400 dark:text-gray-500">
-                      Place a chart showing the reduction in food waste and inventory costs after implementation
-                    </p>
-                  </div>
+                <img
+              src="/images/foodwork-report.webp"
+              className="w-full h-full object-cover"
+            />
                 </div>
               </GlowContainer>
             </div>
