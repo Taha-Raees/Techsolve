@@ -2,6 +2,8 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { ArrowLeft, CheckCircle } from "lucide-react"
 import { GlowContainer } from "@/components/ui/glow-container"
+import { LaptopFrame } from "@/components/ui/laptop-frame"
+import { MobileFrame } from "@/components/ui/mobile-frame"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 import { ImageGallery } from "@/components/ui/image-gallery"
@@ -164,12 +166,15 @@ export default function RestaurantInventoryProject() {
           </div>
           </div>
           <div className="mt-16">
+            <h3 className="text-2xl font-bold mb-8 text-center">Interactive Demo</h3>
+            <LaptopFrame className="mb-8">
               <InteractiveDemo
                 title="Inventory Management System"
                 description="Experience how the inventory management system works across different scenarios."
                 steps={demoSteps}
               />
-            </div>
+            </LaptopFrame>
+          </div>
           
 
           <div className="mt-16 grid md:grid-cols-2 gap-12">
@@ -182,16 +187,14 @@ export default function RestaurantInventoryProject() {
               </p>
             </div>
             <div>
-              <GlowContainer className="aspect-[9/16] max-w-[300px] mx-auto">
-                <div className="relative w-full h-full  overflow-hidden border border-gray-200 dark:border-gray-800">
+              <MobileFrame className="mx-auto">
                 <iframe
-  src="https://foodwork.vercel.app/"
-  className="w-full h-full"
-  loading="lazy"
-  allowFullScreen
-></iframe>
-                </div>
-              </GlowContainer>
+                  src="https://foodwork.vercel.app/"
+                  className="w-full h-full"
+                  loading="lazy"
+                  allowFullScreen
+                />
+              </MobileFrame>
             </div>
           </div>
         </div>
