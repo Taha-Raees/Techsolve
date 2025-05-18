@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 import { ChevronLeft, ChevronRight, Quote } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { AnimatedSection } from "./animations/animated-section"
+import { ConnectingBlob } from "./ui/connecting-blob"
 
 const testimonials = [
   {
@@ -48,7 +49,7 @@ export default function TestimonialsSection() {
   }
 
   return (
-    <section id="testimonials" className="section-padding bg-gray-50 dark:bg-gray-900">
+    <section id="testimonials" className=" relative section-padding bg-transparent dark:bg-gray-900">
       <div className="container-custom">
         <AnimatedSection>
           <div className="text-center mb-12">
@@ -122,6 +123,7 @@ export default function TestimonialsSection() {
             </div>
           </div>
         </AnimatedSection>
+        <ConnectingBlob className="absolute left-1/2 translate-x-4 -bottom-52 w-full h-64 pointer-events-none" />
       </div>
     </section>
   )

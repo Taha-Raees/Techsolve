@@ -27,7 +27,7 @@ const processSteps = [
 
 export default function ProcessSection() {
   return (
-    <section id="process" className="section-padding gradient-bg">
+    <section id="process" className="section-padding bg-transparent">
       <div className="container-custom">
         <AnimatedSection>
           <div className="text-center mb-12">
@@ -52,7 +52,7 @@ export default function ProcessSection() {
                 <p className="text-gray-600 dark:text-gray-300">{step.description}</p>
 
                 {/* Step number */}
-                <div className="absolute top-0 right-0 md:right-auto md:-top-2 md:-left-2 bg-secondary text-white w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold">
+                <div className="absolute top-0 right-0 md:right-auto md:-top-2 md:-left-2 bg-cyan-400 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold">
                   {index + 1}
                 </div>
               </div>

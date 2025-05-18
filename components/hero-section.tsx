@@ -32,11 +32,12 @@ export default function HeroSection() {
   }, [])
 
   return (
-    <section className="pt-16 min-h-screen flex items-center justify-center bg-[url('/images/b1.jpg')] bg-cover ">
-      <div className="container-custom flex flex-col items-center justify-center w-full ">
+    <section className="relative pt-16 min-h-screen flex items-center justify-center bg-[url('/images/b1.jpg')] bg-cover ">
+      {/* Main content */}
+      <div className="container-custom flex flex-col items-center justify-center w-full relative z-10 ">
         <div className="space-y-6 w-full flex flex-col items-center justify-center">
           <AnimatedSection direction="left" delay={0.1}>
-            <h1 className="text-4xl md:text-5xl font-bold leading-tight text-primary text-center ">
+            <h1 className="text-4xl md:text-5xl font-bold leading-tight text-primary text-center">
               Transform Your Business with <span className="text-gray-100">Tailored</span> Tech Solutions
             </h1>
           </AnimatedSection>
@@ -58,6 +59,17 @@ export default function HeroSection() {
           </AnimatedSection>
         </div>
       </div>
+
+      {/* Slanted bottom edge */}
+      <div className="absolute bottom-0 left-0 w-full h-32 bg-white z-40" 
+           style={{ 
+             clipPath: "polygon(0 0, 100% 70%, 100% 100%, 0 100%)",
+             transform: "translateY(1px)" // Prevents any potential gap
+           }} 
+      />
+      
+      {/* Optional: Add a subtle gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent to-gray-900/50" />
     </section>
   )
 }
