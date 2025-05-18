@@ -10,14 +10,14 @@ interface MobileFrameProps {
 
 export function MobileFrame({ children, className = "" }: MobileFrameProps) {
   return (
-    <div className={`relative w-full max-w-[900px] mx-auto ${className}`}>
+    <div className={`relative w-full max-w-[1200px] mx-auto ${className}`}>
       {/* Mobile frame */}
       <Image
         src="/images/ame.svg"
         alt="Mobile frame"
-        width={900}
-        height={1600}
-        className="h-auto"
+        width={1200}
+        height={2400}
+        className="h-full"
       />
       
       {/* Screen content */}

@@ -190,7 +190,13 @@ export default function RestaurantInventoryProject() {
               <MobileFrame className="mx-auto">
                 <iframe
                   src="https://foodwork.vercel.app/"
-                  className="w-full h-full"
+                  className="w-full h-full scale-[0.5] origin-top"
+                  style={{
+                    width: '200%',
+                    height: '200%',
+                    transform: 'scale(0.5)',
+                    transformOrigin: 'top left'
+                  }}
                   loading="lazy"
                   allowFullScreen
                 />
