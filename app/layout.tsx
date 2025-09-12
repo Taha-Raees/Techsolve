@@ -10,7 +10,6 @@ export const metadata: Metadata = {
   title: "TechSolve | Tech Solutions for SMEs",
   description:
     "We build custom software, automation, and tools to streamline your workflow for small to medium enterprises.",
-    generator: 'v0.dev'
 }
 
 export default function RootLayout({

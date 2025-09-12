@@ -8,7 +8,6 @@ import { MobileFrame } from "@/components/ui/mobile-frame"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 import { ImageGallery } from "@/components/ui/image-gallery"
-import { InteractiveDemo } from "@/components/ui/interactive-demo"
 import { getProjectData } from "../data/projects-data"
 
 export default async function ProjectDetail({ params }: { params: Promise<{ slug: string }> }) {

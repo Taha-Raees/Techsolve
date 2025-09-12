@@ -32,7 +32,7 @@ export default function HeroSection() {
   }, [])
 
   return (
-    <section className="relative pt-16 min-h-screen flex items-center justify-center bg-[url('/images/b1.jpg')] bg-cover ">
+    <section className="relative pt-16 min-h-screen  flex items-center justify-center bg-[url('/images/b1.jpg')] bg-cover ">
       {/* Main content */}
       <div className="container-custom flex flex-col items-center justify-center w-full relative z-10 ">
         <div className="space-y-6 w-full flex flex-col items-center justify-center">
@@ -61,11 +61,11 @@ export default function HeroSection() {
       </div>
 
       {/* Slanted bottom edge */}
-      <div className="absolute bottom-0 left-0 w-full h-32 bg-white z-40" 
-           style={{ 
+      <div className="absolute bottom-0 left-0 w-full h-32 bg-white dark:bg-gray-900 z-40"
+           style={{
              clipPath: "polygon(0 0, 100% 70%, 100% 100%, 0 100%)",
              transform: "translateY(1px)" // Prevents any potential gap
-           }} 
+           }}
       />
       
       {/* Optional: Add a subtle gradient overlay */}
