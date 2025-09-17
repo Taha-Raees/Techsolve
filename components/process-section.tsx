@@ -30,9 +30,9 @@ export default function ProcessSection() {
     <section id="process" className="section-padding bg-transparent">
       <div className="container-custom">
         <AnimatedSection>
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-primary mb-4">How We Work</h2>
-            <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-4">How We Work</h2>
+            <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto px-4">
               Our proven process ensures we deliver high-quality solutions that meet your business needs.
             </p>
           </div>

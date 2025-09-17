@@ -35,7 +35,7 @@ export default function Home() {
       </div>
       <Footer />
       <CookieBanner />
-      <ScrollToTop />
+      {/* <ScrollToTop /> */}
       <ScrollIndicator />
     </main>
   )

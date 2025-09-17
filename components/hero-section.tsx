@@ -32,18 +32,18 @@ export default function HeroSection() {
   }, [])
 
   return (
-    <section className="relative pt-16 min-h-screen  flex items-center justify-center bg-[url('/images/b1.webp')] bg-cover ">
+    <section className="relative pt-16 sm:pt-20 min-h-screen flex items-center justify-center bg-[url('/images/b1.webp')] bg-cover">
       {/* Main content */}
       <div className="container-custom flex flex-col items-center justify-center w-full relative z-10 ">
         <div className="space-y-6 w-full flex flex-col items-center justify-center">
           <AnimatedSection direction="left" delay={0.1}>
-            <h1 className="text-4xl md:text-5xl font-bold leading-tight text-primary text-center">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight text-primary text-center">
               Transform Your Business with <span className="text-gray-100">Tailored</span> Tech Solutions
             </h1>
           </AnimatedSection>
 
           <AnimatedSection direction="left" delay={0.3}>
-            <p className="text-lg text-white-300 max-w-xl text-center">
+            <p className="text-base sm:text-lg md:text-xl text-white-300 max-w-xl text-center px-4">
               We build custom software, automation, and tools to streamline your workflow and help your business thrive
               in the digital age.
             </p>

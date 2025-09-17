@@ -52,9 +52,9 @@ export default function TestimonialsSection() {
     <section id="testimonials" className=" relative section-padding bg-transparent dark:bg-gray-900">
       <div className="container-custom">
         <AnimatedSection>
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-primary mb-4">Why Clients Trust Us</h2>
-            <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-4">Why Clients Trust Us</h2>
+            <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto px-4">
               Don't just take our word for it. Here's what our clients have to say about working with us.
             </p>
           </div>
@@ -123,7 +123,9 @@ export default function TestimonialsSection() {
             </div>
           </div>
         </AnimatedSection>
-        <ConnectingBlob className="absolute left-1/2 translate-x-4 -bottom-52 w-full h-64 pointer-events-none" />
+        <div className="absolute left-1/2 translate-x-4 -bottom-52 w-full h-64 pointer-events-none">
+          <ConnectingBlob />
+        </div>
       </div>
     </section>
   )

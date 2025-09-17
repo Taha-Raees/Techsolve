@@ -29,15 +29,15 @@ export default function ContactSection() {
     <section id="contact" className="section-padding">
       <div className="container-custom">
         <AnimatedSection>
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-primary dark:text-white mb-4">Let's Build Your Solution</h2>
-            <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary dark:text-white mb-4">Let's Build Your Solution</h2>
+            <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto px-4">
               Ready to transform your business with custom tech solutions? Get in touch with us today.
             </p>
           </div>
         </AnimatedSection>
 
-        <div className="grid md:grid-cols-2 gap-12">
+        <div className="grid md:grid-cols-2 gap-8 sm:gap-10 md:gap-12">
           {/* Contact Form */}
           <AnimatedSection direction="left" delay={0.2}>
             <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg dark:shadow-gray-900/30 p-6 border border-gray-100 dark:border-gray-700">
