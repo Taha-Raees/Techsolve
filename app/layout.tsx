@@ -1,12 +1,12 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
+import { Iceland } from "next/font/google"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import Chatbot from "@/components/chatbot"
 import { Analytics } from "@vercel/analytics/next"
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" })
+const iceland = Iceland({ subsets: ["latin"], variable: "--font-iceland", weight: "400" })
 
 export const metadata: Metadata = {
   title: "TechSolve | Tech Solutions for SMEs",
@@ -24,7 +24,7 @@ export default function RootLayout({
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
-      <body className={`${inter.variable} font-sans`}>
+      <body className={`${iceland.variable} font-sans`}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false} disableTransitionOnChange>
           {children}
           <Chatbot />
