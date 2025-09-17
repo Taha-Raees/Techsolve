@@ -33,6 +33,93 @@ export interface ProjectData {
 }
 
 export const projectsData: Record<string, ProjectData> = {
+  "zetratech-admin-system": {
+    title: "ZetraTech Admin Platform",
+    client: "Multi-Tenant Solutions",
+    industry: "Admin Software",
+    duration: "10 weeks",
+    year: "2024",
+    challenge:
+      "Multi-Tenant Solutions needed a comprehensive administrative platform to manage multiple retail stores across a shared database ecosystem. The challenge was building a centralized admin system that could handle store creation, subscription management, user roles and permissions, and system monitoring across thousands of interconnected retail operations.",
+    solution:
+      "We developed ZetraTech, a sophisticated admin platform using Next.js 15 and Node.js with Fastify, featuring PostgreSQL database with Prisma ORM. The system includes real-time analytics, audit trails, subscription package management, multi-tenant store configuration, and comprehensive user management with role-based access control. The platform shares the same database schema with retail management systems for seamless integration.",
+    results: [
+      "Reduced administrative overhead by 70%",
+      "Improved cross-store operational visibility",
+      "Enhanced data integrity with audit logging",
+      "Streamlined subscription and billing management",
+      "Real-time system monitoring and analytics",
+      "Scalable multi-tenant architecture",
+    ],
+    technologies: ["Next.js 15", "Node.js", "Fastify", "PostgreSQL", "Prisma ORM", "JWT Authentication", "WebSocket"],
+    testimonial: {
+      quote:
+        "ZetraTech transformed how we manage our entire retail ecosystem. From store creation to subscription management and system monitoring, everything is now centralized and efficient. The shared database architecture with retail systems has eliminated data silos and improved our operational intelligence.",
+      author: "Muhammad Taha Raees",
+      position: "Platform Director, Multi-Tenant Solutions",
+    },
+    galleryImages: [
+      {
+        src: "/placeholder.svg?height=400&width=600",
+        alt: "Admin Dashboard Overview",
+        caption: "Centralized admin dashboard showing system analytics and store management",
+      },
+      {
+        src: "/placeholder.svg?height=400&width=600",
+        alt: "Store Management Interface",
+        caption: "Comprehensive store creation and configuration interface",
+      },
+      {
+        src: "/placeholder.svg?height=400&width=600",
+        alt: "Subscription Management",
+        caption: "Flexible subscription package creation and management system",
+      },
+      {
+        src: "/placeholder.svg?height=400&width=600",
+        alt: "Audit Trail System",
+        caption: "Real-time audit logging and system monitoring dashboard",
+      },
+    ],
+    demoSteps: [
+      {
+        title: "Multi-Tenant Store Management",
+        description:
+          "Create and configure multiple retail stores with customizable settings, business types, and operational parameters across the entire ecosystem.",
+        image: "/placeholder.svg?height=600&width=800",
+      },
+      {
+        title: "User Role & Permission System",
+        description:
+          "Comprehensive user management with role-based access control including SUPERADMIN, ADMIN, OWNER, MANAGER, and STAFF levels.",
+        image: "/placeholder.svg?height=600&width=800",
+      },
+      {
+        title: "Subscription Package Engine",
+        description:
+          "Flexible subscription system allowing configurable pricing, feature sets, user limits, and store capacity management.",
+        image: "/placeholder.svg?height=600&width=800",
+      },
+      {
+        title: "Real-Time Analytics Dashboard",
+        description:
+          "System-wide monitoring with subscription distribution analysis, revenue tracking, and operational KPIs.",
+        image: "/placeholder.svg?height=600&width=800",
+      },
+    ],
+    iframeUrl: "https://zetratech-front.vercel.app/",
+    keyFeatures: [
+      "Multi-tenant retail store management",
+      "Advanced user role and permission system",
+      "Flexible subscription and billing management",
+      "Real-time analytics and monitoring",
+      "Comprehensive audit trail logging",
+      "Security-enhanced authentication (JWT with refresh tokens)",
+      "Database constraint visualization",
+      "Soft delete with recycle bin functionality",
+      "WebSocket real-time updates",
+      "Mobile-responsive admin interface",
+    ],
+  },
   "restaurant-inventory": {
     title: "Multi-Location Restaurant Inventory Management",
     client: "FoodWorks Group",
@@ -451,93 +538,7 @@ export const projectsData: Record<string, ProjectData> = {
       "API-first architecture",
     ],
   },
-  "zetratech-admin-system": {
-    title: "ZetraTech Admin Platform",
-    client: "Multi-Tenant Solutions",
-    industry: "Admin Software",
-    duration: "10 weeks",
-    year: "2024",
-    challenge:
-      "Multi-Tenant Solutions needed a comprehensive administrative platform to manage multiple retail stores across a shared database ecosystem. The challenge was building a centralized admin system that could handle store creation, subscription management, user roles and permissions, and system monitoring across thousands of interconnected retail operations.",
-    solution:
-      "We developed ZetraTech, a sophisticated admin platform using Next.js 15 and Node.js with Fastify, featuring PostgreSQL database with Prisma ORM. The system includes real-time analytics, audit trails, subscription package management, multi-tenant store configuration, and comprehensive user management with role-based access control. The platform shares the same database schema with retail management systems for seamless integration.",
-    results: [
-      "Reduced administrative overhead by 70%",
-      "Improved cross-store operational visibility",
-      "Enhanced data integrity with audit logging",
-      "Streamlined subscription and billing management",
-      "Real-time system monitoring and analytics",
-      "Scalable multi-tenant architecture",
-    ],
-    technologies: ["Next.js 15", "Node.js", "Fastify", "PostgreSQL", "Prisma ORM", "JWT Authentication", "WebSocket"],
-    testimonial: {
-      quote:
-        "ZetraTech transformed how we manage our entire retail ecosystem. From store creation to subscription management and system monitoring, everything is now centralized and efficient. The shared database architecture with retail systems has eliminated data silos and improved our operational intelligence.",
-      author: "Muhammad Taha Raees",
-      position: "Platform Director, Multi-Tenant Solutions",
-    },
-    galleryImages: [
-      {
-        src: "/placeholder.svg?height=400&width=600",
-        alt: "Admin Dashboard Overview",
-        caption: "Centralized admin dashboard showing system analytics and store management",
-      },
-      {
-        src: "/placeholder.svg?height=400&width=600",
-        alt: "Store Management Interface",
-        caption: "Comprehensive store creation and configuration interface",
-      },
-      {
-        src: "/placeholder.svg?height=400&width=600",
-        alt: "Subscription Management",
-        caption: "Flexible subscription package creation and management system",
-      },
-      {
-        src: "/placeholder.svg?height=400&width=600",
-        alt: "Audit Trail System",
-        caption: "Real-time audit logging and system monitoring dashboard",
-      },
-    ],
-    demoSteps: [
-      {
-        title: "Multi-Tenant Store Management",
-        description:
-          "Create and configure multiple retail stores with customizable settings, business types, and operational parameters across the entire ecosystem.",
-        image: "/placeholder.svg?height=600&width=800",
-      },
-      {
-        title: "User Role & Permission System",
-        description:
-          "Comprehensive user management with role-based access control including SUPERADMIN, ADMIN, OWNER, MANAGER, and STAFF levels.",
-        image: "/placeholder.svg?height=600&width=800",
-      },
-      {
-        title: "Subscription Package Engine",
-        description:
-          "Flexible subscription system allowing configurable pricing, feature sets, user limits, and store capacity management.",
-        image: "/placeholder.svg?height=600&width=800",
-      },
-      {
-        title: "Real-Time Analytics Dashboard",
-        description:
-          "System-wide monitoring with subscription distribution analysis, revenue tracking, and operational KPIs.",
-        image: "/placeholder.svg?height=600&width=800",
-      },
-    ],
-    iframeUrl: "https://zetratech-front.vercel.app/",
-    keyFeatures: [
-      "Multi-tenant retail store management",
-      "Advanced user role and permission system",
-      "Flexible subscription and billing management",
-      "Real-time analytics and monitoring",
-      "Comprehensive audit trail logging",
-      "Security-enhanced authentication (JWT with refresh tokens)",
-      "Database constraint visualization",
-      "Soft delete with recycle bin functionality",
-      "WebSocket real-time updates",
-      "Mobile-responsive admin interface",
-    ],
-  },
+  
 }
 
 export function getProjectData(slug: string): ProjectData | null {
