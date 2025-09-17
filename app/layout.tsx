@@ -1,12 +1,12 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Iceland } from "next/font/google"
+import { Electrolize } from "next/font/google"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import Chatbot from "@/components/chatbot"
 import { Analytics } from "@vercel/analytics/next"
 
-const iceland = Iceland({ subsets: ["latin"], variable: "--font-iceland", weight: "400" })
+const electrolize = Electrolize({ subsets: ["latin"], variable: "--font-electrolize", weight: "400" })
 
 export const metadata: Metadata = {
   title: "TechSolve | Tech Solutions for SMEs",
@@ -24,7 +24,7 @@ export default function RootLayout({
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
-      <body className={`${iceland.variable} font-sans`}>
+      <body className={`${electrolize.variable} font-sans`}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false} disableTransitionOnChange>
           {children}
           <Chatbot />
