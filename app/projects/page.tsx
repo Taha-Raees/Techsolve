@@ -63,6 +63,17 @@ const projects = [
     industry: "Technology",
     year: "2024",
   },
+  {
+    slug: "zetratech-admin-system",
+    title: "ZetraTech Admin Platform",
+    client: "Multi-Tenant Solutions",
+    description:
+      "A comprehensive administrative platform for managing multiple retail stores with shared database architecture, featuring subscription management, user roles, audit trails, and real-time system monitoring.",
+    image: "/placeholder.svg?height=400&width=600",
+    techStack: ["Next.js 15", "Node.js", "Fastify", "PostgreSQL", "Prisma ORM"],
+    industry: "Admin Software",
+    year: "2024",
+  },
 ]
 
 export default function ProjectsPage() {

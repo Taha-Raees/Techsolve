@@ -32,7 +32,7 @@ export default function HeroSection() {
   }, [])
 
   return (
-    <section className="relative pt-16 min-h-screen  flex items-center justify-center bg-[url('/images/b1.jpg')] bg-cover ">
+    <section className="relative pt-16 min-h-screen  flex items-center justify-center bg-[url('/images/b1.webp')] bg-cover ">
       {/* Main content */}
       <div className="container-custom flex flex-col items-center justify-center w-full relative z-10 ">
         <div className="space-y-6 w-full flex flex-col items-center justify-center">

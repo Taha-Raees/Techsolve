@@ -122,14 +122,30 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
 
           <div className="mt-16">
             <h3 className="text-2xl font-bold mb-8 text-center">Interactive Demo</h3>
+
+            {/* Direct Link Button */}
+            {project.iframeUrl && (
+              <div className="text-center mb-6">
+                <a
+                  href={project.iframeUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-3 rounded-lg font-medium transition-colors"
+                >
+                  Open Project in New Window
+                  <ArrowLeft className="h-4 w-4 rotate-180" />
+                </a>
+              </div>
+            )}
+
             <LaptopFrame className="mb-8">
               <div className="aspect-video bg-gray-100 dark:bg-gray-900">
             <iframe
- src={project.iframeUrl}
-  className="w-full h-full"
-  loading="lazy"
-  allowFullScreen
-></iframe>
+              src={project.iframeUrl}
+              className="w-full h-full"
+              loading="lazy"
+              allowFullScreen
+            ></iframe>
 
             </div>
             </LaptopFrame>
