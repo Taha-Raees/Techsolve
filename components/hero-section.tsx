@@ -1,36 +1,14 @@
 "use client"
 
-import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
 import { AnimatedSection } from "./animations/animated-section"
-import { GlowContainer } from "./ui/glow-container"
 
-const slides = [
-  {
-    image: "https://action-point.com/wp-content/uploads/2014/10/Software-Development-Team.jpg",
-    alt: "Developer working on a project",
-  },
-  {
-    image: "https://www.gloryassumptionspace.com/wp-content/uploads/2022/11/viber_image_2022-11-14_16-34-07-329.jpg",
-    alt: "Dashboard UI example",
-  },
-  {
-    image: "https://wp-int-blog.s3.eu-central-1.amazonaws.com/wp-content/uploads/2023/09/14090648/BI-Business-Intelligence-Developer-scaled.jpg",
-    alt: "Chatbot demo interface",
-  },
-]
+
 
 export default function HeroSection() {
-  const [currentSlide, setCurrentSlide] = useState(0)
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slides.length)
-    }, 5000)
-    return () => clearInterval(interval)
-  }, [])
-
+  
   return (
     <section className="relative pt-16 sm:pt-20 min-h-screen flex items-center justify-center bg-[url('/images/b1-optimized.webp')] bg-cover">
       {/* Main content */}
@@ -68,7 +46,7 @@ export default function HeroSection() {
            }}
       />
       
-      {/* Optional: Add a subtle gradient overlay */}
+      
       <div className="absolute inset-0 bg-gradient-to-b from-transparent to-gray-900/50" />
     </section>
   )
