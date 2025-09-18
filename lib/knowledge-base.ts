@@ -15,24 +15,10 @@ export const techsolveKnowledge = {
   team: [
     {
       name: "Muhammad Taha Raees",
-      role: "Co-Founder & CTO",
-      experience: "5+ years in cloud architecture and system design",
-      skills: ["Cloud Architecture", "DevOps", "System Security", "Technical Leadership"],
-      email: "taha.raees@techsolve.com"
-    },
-    {
-      name: "Humayun Zahid Chohan",
-      role: "Co-Founder & CFO",
-      experience: "7 years in financial strategy",
-      skills: ["Financial Planning", "Risk Management", "Fundraising", "Business Strategy"],
-      email: "humayun.chohan@techsolve.com"
-    },
-    {
-      name: "Franziska Müller",
-      role: "Co-Founder & CMO",
-      experience: "8+ years in digital marketing",
-      skills: ["Brand Strategy", "Digital Marketing", "SEO/SEM", "Customer Analytics"],
-      email: "franziska.muller@techsolve.com"
+      role: "Founder & Full-Stack Developer",
+      experience: "Expertise in full-stack development with a background in mechanical engineering",
+      skills: ["React", "Next.js", "Node.js", "TypeScript", "Prisma", "AI Integration", "DevOps", "Testing"],
+      email: "raeesmuhammadtaha@gmail.com"
     }
   ],
 
@@ -281,13 +267,10 @@ What interests you most about TechSolve:
 
 Feel free to ask me anything TechSolve-related!`;
 
-export const contactPrompt = `\n\n---\n\nInterested in working with TechSolve? I'd be happy to connect you with our team!
+export const contactPrompt = `\n\n---\n\nInterested in working with TechSolve? I'd be happy to connect you with our founder!
 
-You can reach out to us by:
+You can reach out by:
 - Filling out the contact form on our website
-- Emailing us directly:
-  • Muhammad Taha Raees (CTO): taha.raees@techsolve.com
-  • Humayun Zahid Chohan (CFO): humayun.chohan@techsolve.com
-  • Franziska Müller (CMO): franziska.muller@techsolve.com
+- Emailing Muhammad Taha Raees directly at raeesmuhammadtaha@gmail.com
 
 Shall I help you explore more of our work first?`;

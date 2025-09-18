@@ -123,7 +123,7 @@ export default function TestimonialsSection() {
             </div>
           </div>
         </AnimatedSection>
-        <div className="absolute left-1/2 translate-x-4 -bottom-52 w-full h-64 pointer-events-none">
+        <div className="hidden md:block absolute left-1/2 translate-x-4 -bottom-52 w-full h-64 pointer-events-none">
           <ConnectingBlob />
         </div>
       </div>

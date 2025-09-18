@@ -1,26 +1,39 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useCallback } from "react"
 import { Button } from "@/components/ui/button"
 import { ArrowUp } from "lucide-react"
+
+// Throttle function to limit scroll event firing
+function throttle<T extends (...args: any[]) => any>(func: T, limit: number): T {
+  let inThrottle: boolean
+  return ((...args) => {
+    if (!inThrottle) {
+      func.apply(this, args)
+      inThrottle = true
+      setTimeout(() => inThrottle = false, limit)
+    }
+  }) as T
+}
 
 export default function ScrollToTop() {
   const [isVisible, setIsVisible] = useState(false)
 
   // Show button when page is scrolled down
-  const toggleVisibility = () => {
+  const toggleVisibility = useCallback(() => {
     if (window.scrollY > 500) {
       setIsVisible(true)
     } else {
       setIsVisible(false)
     }
-  }
-
-  // Set the scroll event listener
-  useEffect(() => {
-    window.addEventListener("scroll", toggleVisibility)
-    return () => window.removeEventListener("scroll", toggleVisibility)
   }, [])
+
+  // Set the throttled scroll event listener
+  useEffect(() => {
+    const throttledToggleVisibility = throttle(toggleVisibility, 16) // ~60fps
+    window.addEventListener("scroll", throttledToggleVisibility)
+    return () => window.removeEventListener("scroll", throttledToggleVisibility)
+  }, [toggleVisibility])
 
   // Scroll to top function
   const scrollToTop = () => {

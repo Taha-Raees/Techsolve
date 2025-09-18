@@ -1,11 +1,23 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useCallback } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 import { ThemeToggle } from "./theme-toggle"
 import { usePathname, useRouter } from "next/navigation"
+
+// Throttle function to limit scroll event firing
+function throttle(func: (...args: any[]) => any, limit: number) {
+  let inThrottle: boolean
+  return (...args: any[]) => {
+    if (!inThrottle) {
+      func(...args)
+      inThrottle = true
+      setTimeout(() => inThrottle = false, limit)
+    }
+  }
+}
 
 const mainMenuItems = [
   { name: "Home", href: "/" },
@@ -34,11 +46,16 @@ export default function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10)
+      const scrolled = window.scrollY > 10
+      console.log('Scroll detected, scrolled:', scrolled, 'scrollY:', window.scrollY)
+      setIsScrolled(scrolled)
     }
 
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
+    // Throttled scroll handler
+    const throttledHandleScroll = throttle(handleScroll, 16) // ~60fps
+
+    window.addEventListener("scroll", throttledHandleScroll)
+    return () => window.removeEventListener("scroll", throttledHandleScroll)
   }, [])
 
   const handleNavigation = (href: string) => {
@@ -62,10 +79,10 @@ export default function Header() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-white/95 dark:bg-gray-950/95 backdrop-blur-sm shadow-sm" : "bg-transparent"
+        isScrolled ? "bg-white dark:bg-white shadow-lg border-b border-gray-200 dark:border-gray-300 text-gray-900 dark:text-gray-900" : "bg-transparent"
       }`}
     >
-      <div className="container-custom flex h-16 items-center justify-between border-b border-gray-100 dark:border-gray-800">
+      <div className="container-custom flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center">
           <span className="text-xl font-bold text-primary dark:text-white">TechSolve</span>
         </Link>
@@ -100,7 +117,7 @@ export default function Header() {
 
       {/* Mobile Navigation */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-white dark:bg-gray-900 border-b dark:border-gray-800">
+        <div className="md:hidden bg-white dark:bg-white border-b dark:border-gray-300">
           <div className="container-custom py-4 flex flex-col space-y-3">
             {menuItems.map((item) => (
               <button

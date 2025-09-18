@@ -7,7 +7,7 @@ import Link from "next/link"
 
 export default function ProjectsSection() {
   return (
-    <section id="projects" className="m-10 p-10 rounded-lg bg-[url('https://images.unsplash.com/photo-1531297484001-80022131f5a1?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dGVjaG5vbG9neXxlbnwwfHwwfHx8MA%3D%3D')] bg-cover bg-center bg-no-repeat">
+    <section id="projects" className="m-10 p-10 rounded-lg bg-[url('https://images.unsplash.com/photo-1531297484001-80022131f5a1?fm=jpg&q=80&w=1920&h=1080&fit=crop')] bg-cover bg-center bg-no-repeat">
       <div className="container-custom">
         <AnimatedSection>
           <div className="text-center mb-8 sm:mb-12">
@@ -29,6 +29,14 @@ export default function ProjectsSection() {
           </div>
         </AnimatedSection>
       </div>
+
+      {/* Preload optimized background image */}
+      <img
+        src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?fm=jpg&q=80&w=1920&h=1080&fit=crop"
+        alt=""
+        className="hidden"
+        loading="eager"
+      />
     </section>
   )
 }

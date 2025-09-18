@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { useEffect, useState, useCallback } from "react"
 import { usePathname } from "next/navigation"
 
 const pageSections = {
@@ -10,45 +10,60 @@ const pageSections = {
   "/services": ["services", "features", "pricing", "faq"]
 }
 
+// Throttle function to limit scroll event firing
+function throttle<T extends (...args: any[]) => any>(func: T, limit: number): T {
+  let inThrottle: boolean
+  return ((...args) => {
+    if (!inThrottle) {
+      func.apply(this, args)
+      inThrottle = true
+      setTimeout(() => inThrottle = false, limit)
+    }
+  }) as T
+}
+
 export default function ScrollIndicator() {
   const [scrollProgress, setScrollProgress] = useState(0)
   const [activeSection, setActiveSection] = useState("")
   const pathname = usePathname()
   const sections = pageSections[pathname as keyof typeof pageSections] || []
 
-  useEffect(() => {
-    if (sections.length === 0) return
+  const handleScroll = useCallback(() => {
+    // Calculate scroll progress
+    const totalHeight = document.body.scrollHeight - window.innerHeight
+    const progress = (window.scrollY / totalHeight) * 100
+    setScrollProgress(progress)
 
-    const handleScroll = () => {
-      // Calculate scroll progress
-      const totalHeight = document.body.scrollHeight - window.innerHeight
-      const progress = (window.scrollY / totalHeight) * 100
-      setScrollProgress(progress)
+    // Determine active section
+    const sectionElements = sections.map((id) => document.getElementById(id))
+    const viewportHeight = window.innerHeight
+    const viewportMiddle = window.scrollY + viewportHeight / 2
 
-      // Determine active section
-      const sectionElements = sections.map((id) => document.getElementById(id))
-      const viewportHeight = window.innerHeight
-      const viewportMiddle = window.scrollY + viewportHeight / 2
+    for (let i = sectionElements.length - 1; i >= 0; i--) {
+      const element = sectionElements[i]
+      if (element) {
+        const { top, bottom } = element.getBoundingClientRect()
+        const elementTop = top + window.scrollY
+        const elementBottom = bottom + window.scrollY
 
-      for (let i = sectionElements.length - 1; i >= 0; i--) {
-        const element = sectionElements[i]
-        if (element) {
-          const { top, bottom } = element.getBoundingClientRect()
-          const elementTop = top + window.scrollY
-          const elementBottom = bottom + window.scrollY
-
-          if (elementTop <= viewportMiddle && elementBottom >= viewportMiddle) {
-            setActiveSection(sections[i])
-            break
-          }
+        if (elementTop <= viewportMiddle && elementBottom >= viewportMiddle) {
+          setActiveSection(sections[i])
+          break
         }
       }
     }
-
-    window.addEventListener("scroll", handleScroll)
-    handleScroll() // Initial check
-    return () => window.removeEventListener("scroll", handleScroll)
   }, [sections])
+
+  useEffect(() => {
+    if (sections.length === 0) return
+
+    // Throttled scroll handler
+    const throttledHandleScroll = throttle(handleScroll, 16) // ~60fps
+
+    window.addEventListener("scroll", throttledHandleScroll)
+    handleScroll() // Initial check
+    return () => window.removeEventListener("scroll", throttledHandleScroll)
+  }, [sections, handleScroll])
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id)

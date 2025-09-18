@@ -10,38 +10,14 @@ import { StaggerContainer } from "@/components/animations/stagger-container"
 const teamMembers = [
   {
     name: "Muhammad Taha Raees",
-    role: "Co-Founder & CTO",
+    role: "Founder & Full-Stack Developer",
     image: "/images/file.png",
-    bio: "As CTO, Taha oversees all technical operations with 5+ years experience in cloud architecture and system design. He specializes in building scalable solutions that drive business growth through technology innovation.",
-    skills: ["Cloud Architecture", "DevOps", "System Security", "Technical Leadership"],
+    bio: "I see myself as an engineer first—someone who can analyze problems, design solutions, and bring them to life. My path from mechanical engineering into software has equipped me with both technical breadth and problem-solving depth. Whether building responsive frontends, optimizing backends, or ensuring quality through testing, I focus on creating user-focused, efficient, and maintainable digital solutions. I thrive in environments where I can transform complex challenges into simple, effective systems.",
+    skills: ["HTML", "CSS", "JavaScript", "React", "Next.js", "TypeScript", "Tailwind CSS", "Zustand", "Framer Motion", "Node.js", "Express", "Fastify", "Prisma", "SQLite", "PostgreSQL", "JWT", "RESTful APIs", "WebSockets", "AI Chatbot Integration", "n8n Workflow Automation", "Cypress", "Jest", "Postman", "Lighthouse", "Docker", "Kubernetes", "GitHub Actions"],
     social: {
-      linkedin: "#",
-      github: "#",
-      email: "taha.raees@techsolve.com",
-    },
-  },
-  {
-    name: "Humayun Zahid Chohan",
-    role: "Co-Founder & CFO",
-    image: "/images/humyun.png",
-    bio: "With 7 years in financial strategy, Humayun manages our fiscal operations and investment strategies. He specializes in SaaS financial models and has helped scale multiple tech startups to profitability.",
-    skills: ["Financial Planning", "Risk Management", "Fundraising", "Business Strategy"],
-    social: {
-      linkedin: "#",
-      github: "#",
-      email: "humayun.chohan@techsolve.com",
-    },
-  },
-  {
-    name: "Franziska Müller",
-    role: "Co-Founder & CMO",
-    image: "/images/cmo-profile.jpg",
-    bio: "Franziska drives our brand strategy with 8+ years in digital marketing. She has led successful campaigns and specializes in SaaS product launches and customer acquisition.",
-    skills: ["Brand Strategy", "Digital Marketing", "SEO/SEM", "Customer Analytics"],
-    social: {
-      linkedin: "#",
-      twitter: "#",
-      email: "franziska.muller@techsolve.com",
+      linkedin: "https://linkedin.com/in/raees-muhammad-taha",
+      github: "https://github.com/Taha-Raees",
+      email: "raeesmuhammadtaha@gmail.com",
     },
   },
 ]
@@ -61,10 +37,10 @@ export default function AboutPage() {
                 Back to Home
               </Button>
             </Link>
-            <h1 className="text-4xl md:text-5xl font-bold text-primary mb-6">Meet Our Team</h1>
+            <h1 className="text-4xl md:text-5xl font-bold text-primary mb-6">About Muhammad Taha Raees</h1>
             <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-              We're a diverse team of developers, designers, and problem solvers passionate about creating technology
-              solutions that help businesses thrive.
+              Get to know the developer behind TechSolve's innovative technology solutions that help businesses thrive
+              through custom software and automation.
             </p>
           </div>
         </div>
@@ -130,9 +106,9 @@ export default function AboutPage() {
         <div className="container-custom">
           <AnimatedSection>
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-primary mb-4">Our Experts</h2>
+              <h2 className="text-3xl font-bold text-primary mb-4">About Muhammad Taha Raees</h2>
               <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-                Meet the talented individuals who make our company exceptional.
+                Learn more about my background, skills, and passion for creating technology solutions.
               </p>
             </div>
           </AnimatedSection>
@@ -256,39 +232,25 @@ export default function AboutPage() {
       {/* Company Story */}
       <section id="story" className="py-16 bg-white dark:bg-gray-900">
         <div className="container-custom">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          
             <AnimatedSection direction="left">
               <h2 className="text-3xl font-bold text-primary mb-4">Our Story</h2>
               <p className="text-gray-600 dark:text-gray-300 mb-4">
                 TechSolve was founded in 2018 with a simple mission: make powerful technology accessible to small and
-                medium businesses. We saw that many SMEs were being left behind in the digital transformation because
+                medium businesses. I saw that many SMEs were being left behind in the digital transformation because
                 they couldn't afford enterprise-level solutions.
               </p>
               <p className="text-gray-600 dark:text-gray-300 mb-4">
-                Starting with just three team members, we've grown to a team of dedicated professionals serving clients
-                across Europe. Our focus has always been on creating practical, scalable solutions that deliver real
-                business value.
+                Starting as a solo developer with a background in mechanical engineering, I have grown into delivering
+                professional services to clients across Europe. My focus has always been on creating practical, scalable solutions that deliver real business value.
               </p>
               <p className="text-gray-600 dark:text-gray-300">
-                Today, we're proud to have helped over 50 businesses transform their operations through custom
+                Today, I'm proud to have helped over 50 businesses transform their operations through custom
                 technology solutions that grow with their needs.
               </p>
             </AnimatedSection>
 
-            <AnimatedSection direction="right" delay={0.2}>
-              <GlowContainer className="aspect-square">
-                <div className="relative w-full h-full rounded-[2.5rem] overflow-hidden border border-gray-200 dark:border-gray-800">
-                  {/* Image placeholder with instructions */}
-                  <div className="absolute inset-0 flex flex-col items-center justify-center bg-gray-100 dark:bg-gray-800 p-6 text-center">
-                    <p className="text-gray-500 dark:text-gray-400 font-medium mb-2">Team Photo</p>
-                    <p className="text-sm text-gray-400 dark:text-gray-500">
-                      Place a photo of the team working together or in the office
-                    </p>
-                  </div>
-                </div>
-              </GlowContainer>
-            </AnimatedSection>
-          </div>
+          
         </div>
       </section>
 

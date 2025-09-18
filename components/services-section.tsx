@@ -58,7 +58,7 @@ export default function ServicesSection() {
         </AnimatedSection>
       </div>
 
-      <div className="absolute left-1/2 -translate-x-1/2 -bottom-56 w-full h-64 pointer-events-none">
+      <div className="hidden md:block absolute left-1/2 -translate-x-1/2 -bottom-56 w-full h-64 pointer-events-none">
         <ConnectingBlob />
       </div>
     </section>
