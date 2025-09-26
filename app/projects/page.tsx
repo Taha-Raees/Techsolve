@@ -9,28 +9,6 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 
 const projects = [
   {
-    slug: "restaurant-inventory",
-    title: "Multi-Location Restaurant Inventory Management",
-    client: "FoodWorks Group",
-    description:
-      "A centralized inventory management system designed for restaurant chains with real-time tracking, multi-location support, and role-based access control for seamless operations across multiple restaurant locations.",
-    image: "/images/foodwork-Dashboard.webp",
-    techStack: ["Next.js", "Node.js", "MongoDB", "React Native"],
-    industry: "Hospitality",
-    year: "2023",
-  },
-  {
-    slug: "clinic-management",
-    title: "Comprehensive Healthcare Management System",
-    client: "HealthCare Plus",
-    description:
-      "A modern healthcare management platform featuring appointment booking, patient records management, doctor profiles, and a comprehensive facility showcase with testimonials and automated patient communication.",
-    image: "/images/Healtcare-landingpage.webp",
-    techStack: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
-    industry: "Healthcare",
-    year: "2024",
-  },
-  {
     slug: "retail-management",
     title: "Cross-Platform Retail Management System",
     client: "Retail Solutions Co",
@@ -50,6 +28,17 @@ const projects = [
     image: "/images/rmspro -dashboard.webp",
     techStack: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
     industry: "Hospitality",
+    year: "2024",
+  },
+  {
+    slug: "clinic-management",
+    title: "Comprehensive Healthcare Management System",
+    client: "HealthCare Plus",
+    description:
+      "A modern healthcare management platform featuring appointment booking, patient records management, doctor profiles, and a comprehensive facility showcase with testimonials and automated patient communication.",
+    image: "/images/Healtcare-landingpage.webp",
+    techStack: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+    industry: "Healthcare",
     year: "2024",
   },
   {
@@ -73,6 +62,17 @@ const projects = [
     techStack: ["Next.js 15", "Node.js", "Fastify", "PostgreSQL", "Prisma ORM"],
     industry: "Admin Software",
     year: "2024",
+  },
+  {
+    slug: "restaurant-inventory",
+    title: "Multi-Location Restaurant Inventory Management",
+    client: "FoodWorks Group",
+    description:
+      "A centralized inventory management system designed for restaurant chains with real-time tracking, multi-location support, and role-based access control for seamless operations across multiple restaurant locations.",
+    image: "/images/foodwork-Dashboard.webp",
+    techStack: ["Next.js", "Node.js", "MongoDB", "React Native"],
+    industry: "Hospitality",
+    year: "2023",
   },
 ]
 
