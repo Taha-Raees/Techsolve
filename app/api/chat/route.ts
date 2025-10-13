@@ -69,7 +69,7 @@ export async function POST(request: NextRequest) {
         'X-Title': 'TechSolve Assistant'
       },
       body: JSON.stringify({
-        model: 'deepseek/deepseek-chat-v3.1:free',
+        model: 'z-ai/glm-4.5-air:free',
         messages: allMessages,
         max_tokens: 1000,
         temperature: 0.7,
