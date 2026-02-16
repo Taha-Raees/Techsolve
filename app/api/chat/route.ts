@@ -1,12 +1,22 @@
 import { NextRequest, NextResponse } from 'next/server';
+import OpenAI from 'openai';
 import { systemPrompt, initialGreeting, contactPrompt, formatProjectResponse, getAllProjectSlugs, techsolveKnowledge } from '@/lib/knowledge-base';
 
 const OPENROUTER_API_KEY = process.env.OPENROUTER_API_KEY;
-const OPENROUTER_BASE_URL = 'https://openrouter.ai/api/v1';
+
+const client = new OpenAI({
+  baseURL: 'https://openrouter.ai/api/v1',
+  apiKey: OPENROUTER_API_KEY,
+  defaultHeaders: {
+    'HTTP-Referer': process.env.NEXT_PUBLIC_APP_URL ,
+    'X-Title': 'TechSolve Assistant'
+  }
+});
 
 interface Message {
   role: 'user' | 'assistant' | 'system';
   content: string;
+  reasoning_details?: unknown;
 }
 
 export async function POST(request: NextRequest) {
@@ -57,37 +67,39 @@ export async function POST(request: NextRequest) {
       content: systemPrompt
     };
 
-    const allMessages = [systemMessage, ...messages];
+    const allMessages: Message[] = [systemMessage, ...messages];
 
-    // Call OpenRouter API
-    const response = await fetch(`${OPENROUTER_BASE_URL}/chat/completions`, {
-      method: 'POST',
-      headers: {
-        'Authorization': `Bearer ${OPENROUTER_API_KEY}`,
-        'Content-Type': 'application/json',
-        'HTTP-Referer': process.env.NEXT_PUBLIC_APP_URL || 'https://techsolve.vercel.app',
-        'X-Title': 'TechSolve Assistant'
-      },
-      body: JSON.stringify({
-        model: 'z-ai/glm-4.5-air:free',
-        messages: allMessages,
-        max_tokens: 1000,
-        temperature: 0.7,
-        stream: false
-      })
+    // Call OpenRouter API using OpenAI SDK with reasoning enabled
+    // Using type assertion to bypass TypeScript strict checking for OpenRouter-specific parameters
+    const createCompletion = client.chat.completions.create.bind(client.chat.completions);
+    const apiResponse = await (createCompletion as (params: {
+      model: string;
+      messages: Array<{ role: string; content: string; reasoning_details?: unknown }>;
+      max_tokens: number;
+      temperature: number;
+      reasoning: { enabled: boolean };
+    }) => Promise<{
+      choices: Array<{
+        message: {
+          content: string | null;
+          reasoning_details?: unknown;
+        };
+      }>;
+    }>)({
+      model: 'stepfun/step-3.5-flash:free',
+      messages: allMessages.map(msg => ({
+        role: msg.role,
+        content: msg.content,
+        ...(msg.reasoning_details ? { reasoning_details: msg.reasoning_details } : {})
+      })),
+      max_tokens: 1000,
+      temperature: 0.7,
+      reasoning: { enabled: true }
     });
 
-    if (!response.ok) {
-      const errorData = await response.json().catch(() => ({ error: 'Unknown error' }));
-      console.error('OpenRouter API error:', errorData);
-      return NextResponse.json({
-        error: 'Failed to get response from AI',
-        message: initialGreeting
-      }, { status: 500 });
-    }
-
-    const data = await response.json();
-    const aiMessage = data.choices?.[0]?.message?.content;
+    const responseMessage = apiResponse.choices?.[0]?.message;
+    const aiMessage = responseMessage?.content;
+    const reasoningDetails = responseMessage?.reasoning_details;
 
     if (!aiMessage) {
       return NextResponse.json({
@@ -98,7 +110,8 @@ export async function POST(request: NextRequest) {
 
     return NextResponse.json({
       message: aiMessage,
-      type: 'ai_response'
+      type: 'ai_response',
+      reasoning_details: reasoningDetails
     });
 
   } catch (error) {
